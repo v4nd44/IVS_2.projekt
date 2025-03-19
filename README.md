@@ -1,15 +1,15 @@
 # IVS_2.projekt
 
 Prostredi
----------
-
+-------
 Ubuntu 64bit
-Windows 64bit
 
+Nazev tymu
+-------
+vydrysek
 
-Nazev tymu: vydrysek
-
-Autori:
+Autori
+-------
 - xkocalv00 Veronika Kočalková
 - xluskak00 Klára Luskačová
 - xpivovv00 Vanda Pivovarníková
