@@ -8,7 +8,7 @@
 #pridat assertions k funkciam na najvacsie a najmensie mozne cisla
 
 
-#from 'nazov kniznice' import add, sub, mul, div, power, sqrt, fact - dopisat nazov file s kniznicou a odkomentovat ked budu funkcie naimplementavane v kniznici 
+from matlib import add, sub, mul, div, power, sqrt, fact #- dopisat nazov file s kniznicou a odkomentovat ked budu funkcie naimplementavane v kniznici 
 #(da sa importnut pocas implementacie aj len funkcie, ktore uz su a ostatne zatial zakomentovat, aby testy prebehli)
 
 import pytest
