@@ -20,7 +20,7 @@ def add(a,b):
 @param b second number 
 @return the difference of two numbers
 """
-def subtract(a,b):
+def sub(a,b):
     return a - b
 
 
@@ -30,7 +30,7 @@ def subtract(a,b):
 @param b second number 
 @return the product of two numbers
 """
-def multiply(a,b):
+def mul(a,b):
     return a * b
 
 
@@ -41,7 +41,7 @@ def multiply(a,b):
 @return the quotient of two numbers
 @raises ValueError if division by zero is attempted
 """
-def divide(a,b):
+def div(a,b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
@@ -53,7 +53,7 @@ def divide(a,b):
 @param b the exponent
 @return the result of raising a to the power of b
 """
-def exponentiation(a,b):
+def power(a,b):
     return a**b
 
 
@@ -64,7 +64,7 @@ def exponentiation(a,b):
 @return the b-th root of a
 @raises ValueError if a is negative and b is even.
 """
-def root(a,b):
+def sqrt(a,b):
     if a<0 and b % 2 == 0:
         raise ValueError("Cannot make square root of a negative number.")
     return a**(1/b)
@@ -76,7 +76,7 @@ def root(a,b):
 @return the factorial of n
 @raises ValueError if n is negative
 """
-def factorial(n):
+def fact(n):
     if n < 0:
         raise ValueError("Cannot make factorial of a negative number.")
     if n == 0 or n == 1:
