@@ -53,6 +53,8 @@ def div(a,b):
 @return the result of raising a to the power of b
 """
 def power(a,b):
+    if not isinstance(b, int):
+        raise ValueError
     if a == 0 and b == 0:
         raise ValueError
     if b <= 0:
@@ -72,8 +74,8 @@ def power(a,b):
 def sqrt(a,b):
     if a<0 and b % 2 == 0:
         raise ValueError
-    if b==0:
-        return ValueError
+    if b<=0:
+        raise ValueError
     return round(a ** (1 / b), 13)
 
 
