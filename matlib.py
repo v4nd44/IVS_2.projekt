@@ -11,7 +11,7 @@
 @return the sum of two numbers
 """
 def add(a,b):   
-    return a + b
+    return round(a + b, 13)
 
 
 """
@@ -21,8 +21,7 @@ def add(a,b):
 @return the difference of two numbers
 """
 def sub(a,b):
-    return a - b
-
+    return round(a - b, 13)
 
 """
 @brief multiplication
@@ -31,7 +30,7 @@ def sub(a,b):
 @return the product of two numbers
 """
 def mul(a,b):
-    return a * b
+    return round(a * b, 13)
 
 
 """
@@ -44,7 +43,7 @@ def mul(a,b):
 def div(a,b):
     if b == 0:
         raise ZeroDivisionError
-    return a / b
+    return round(a / b, 13)
 
 
 """
@@ -54,7 +53,7 @@ def div(a,b):
 @return the result of raising a to the power of b
 """
 def power(a,b):
-    return a**b
+    return round(a ** b, 13)
 
 
 """
@@ -67,7 +66,7 @@ def power(a,b):
 def sqrt(a,b):
     if a<0 and b % 2 == 0:
         raise ValueError
-    return a**(1/b)
+    return round(a ** (1 / b), 13)
 
 
 """
@@ -79,8 +78,7 @@ def sqrt(a,b):
 def fact(n):
     if not isinstance(n, int):
         raise ValueError
-    if n < 0:
-        raise ValueError
-    if n == 0 or n == 1:
-        return 1
-    return n * fact(n - 1)
+    result = 1
+    for idx in range(2, n + 1):
+        result *= idx
+    return round(result, 13)
