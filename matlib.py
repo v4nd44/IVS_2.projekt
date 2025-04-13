@@ -43,7 +43,7 @@ def mul(a,b):
 """
 def div(a,b):
     if b == 0:
-        raise ValueError("Cannot divide by zero.")
+        raise ZeroDivisionError
     return a / b
 
 
@@ -66,7 +66,7 @@ def power(a,b):
 """
 def sqrt(a,b):
     if a<0 and b % 2 == 0:
-        raise ValueError("Cannot make square root of a negative number.")
+        raise IncorrectRootError
     return a**(1/b)
 
 
@@ -78,9 +78,9 @@ def sqrt(a,b):
 """
 def fact(n):
     if not isinstance(n, int):
-        raise TypeError("Factorial is only defined for integers.")
+        raise IncorrectNumError
     if n < 0:
-        raise ValueError("Cannot make factorial of a negative number.")
+        raise IncorrectNumError
     if n == 0 or n == 1:
         return 1
     return n * fact(n - 1)
