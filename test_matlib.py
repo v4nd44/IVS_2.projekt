@@ -72,13 +72,13 @@ def test_power():
     assert power(2, 2) == 4
     assert power(0.5, 2) == 0.25
 
-    with pytest.raises(IncorrectExponentError):
+    with pytest.raises(ValueError):
         power(2, -1)
 
-    with pytest.raises(IncorrectExponentError):
+    with pytest.raises(ValueError):
         power(2, 0.5)
 
-    with pytest.raises(UndefinedResultError):
+    with pytest.raises(ValueError):
         power(0, 0)
 
 
@@ -92,13 +92,13 @@ def test_sqrt():
     assert sqrt(1, 2) == 1
     assert sqrt(1000000000, 31622.776601683)
 
-    with pytest.raises(IncorrectRootError):
+    with pytest.raises(ValueError):
         sqrt(2, 0)
-    with pytest.raises(IncorrectRootError):
+    with pytest.raises(ValueError):
         sqrt(2, 1)
-    with pytest.raises(IncorrectRootError):
+    with pytest.raises(ValueError):
         sqrt(2, -2)
-    with pytest.raises(IncorrectBaseError):
+    with pytest.raises(ValueError):
         sqrt(-1, 2)
     
 
@@ -110,13 +110,13 @@ def test_fact():
     assert fact(1) == 1
     assert fact(2) == 2
 
-    with pytest.raises(IncorrectNumError):
+    with pytest.raises(ValueError):
         fact(-1)
 
-    with pytest.raises(IncorrectNumError):
+    with pytest.raises(ValueError):
         fact(0.5)
 
-    with pytest.raises(IncorrectNumError):
+    with pytest.raises(ValueError):
         fact(-0.5)
 
 
