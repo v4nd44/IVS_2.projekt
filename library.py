@@ -1,40 +1,84 @@
 # IVS - 2. projekt
 # matematická knihovna pro kalkulačku
 
+# autor: Klara Luskacova (xluskak00)
+# tym: vydrysek
+
 """
-@brief scitani
-@param a prvni cislo 
-@param b druhe cislo 
-@return soucet dvou cisel
+@brief addition
+@param a first number 
+@param b second number 
+@return the sum of two numbers
 """
 def add(a,b):   
-    return a+b
+    return a + b
+
 
 """
-@brief odcitani
-@param a prvni cislo 
-@param b druhe cislo 
-@return rozdil dvou cisel
+@brief subtraction
+@param a first number 
+@param b second number 
+@return the difference of two numbers
 """
 def subtract(a,b):
-    return a-b
+    return a - b
+
 
 """
-@brief nasobeni
-@param a prvni cislo 
-@param b druhe cislo 
-@return nasobek dvou cisel
+@brief multiplication
+@param a first number 
+@param b second number 
+@return the product of two numbers
 """
 def multiply(a,b):
-    return a*b
+    return a * b
+
 
 """
-@brief deleni
-@param a prvni cislo 
-@param b druhe cislo 
-@return podil dvou cisel
+@brief division
+@param a first number 
+@param b second number 
+@return the quotient of two numbers
+@raises ValueError if division by zero is attempted
 """
-def devide(a,b):
+def divide(a,b):
     if b == 0:
-        raise ValueError("Nelze dělit nulou.")
+        raise ValueError("Cannot divide by zero.")
     return a / b
+
+
+"""
+@brief exponentiation
+@param a the number
+@param b the exponent
+@return the result of raising a to the power of b
+"""
+def exponentiation(a,b):
+    return a**b
+
+
+"""
+@brief root
+@param a the number
+@param b the degree of the root
+@return the b-th root of a
+@raises ValueError if a is negative and b is even.
+"""
+def root(a,b):
+    if a<0 and b % 2 == 0:
+        raise ValueError("Cannot make square root of a negative number.")
+    return a**(1/b)
+
+
+"""
+@brief factorial
+@param n the number
+@return the factorial of n
+@raises ValueError if n is negative
+"""
+def factorial(n):
+    if n < 0:
+        raise ValueError("Cannot make factorial of a negative number.")
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
