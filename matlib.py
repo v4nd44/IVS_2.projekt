@@ -66,7 +66,7 @@ def power(a,b):
 """
 def sqrt(a,b):
     if a<0 and b % 2 == 0:
-        raise IncorrectRootError
+        raise ValueError
     return a**(1/b)
 
 
@@ -78,9 +78,9 @@ def sqrt(a,b):
 """
 def fact(n):
     if not isinstance(n, int):
-        raise IncorrectNumError
+        raise ValueError
     if n < 0:
-        raise IncorrectNumError
+        raise ValueError
     if n == 0 or n == 1:
         return 1
     return n * fact(n - 1)
