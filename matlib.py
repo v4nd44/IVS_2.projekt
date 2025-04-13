@@ -38,7 +38,7 @@ def mul(a,b):
 @param a first number 
 @param b second number 
 @return the quotient of two numbers
-@raises ValueError if division by zero is attempted
+@raises ZeroDivisionError if division by zero is attempted
 """
 def div(a,b):
     if b == 0:
@@ -72,6 +72,8 @@ def power(a,b):
 def sqrt(a,b):
     if a<0 and b % 2 == 0:
         raise ValueError
+    if b==0:
+        return ValueError
     return round(a ** (1 / b), 13)
 
 
