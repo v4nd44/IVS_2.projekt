@@ -53,6 +53,10 @@ def div(a,b):
 @return the result of raising a to the power of b
 """
 def power(a,b):
+    if a == 0 and b == 0:
+        raise ValueError
+    if a < 0 and not float(b).is_integer():
+        raise ValueError
     return round(a ** b, 13)
 
 
