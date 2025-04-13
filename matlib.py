@@ -55,7 +55,7 @@ def div(a,b):
 def power(a,b):
     if a == 0 and b == 0:
         raise ValueError
-    if b < 0:
+    if b <= 0:
         raise ValueError
     if a < 0 and not float(b).is_integer():
         raise ValueError
@@ -84,7 +84,9 @@ def sqrt(a,b):
 def fact(n):
     if not isinstance(n, int):
         raise ValueError
+    if n<0:
+        raise ValueError
     result = 1
     for idx in range(2, n + 1):
-        result *= idx
+        result = result * idx
     return round(result, 13)
