@@ -81,4 +81,4 @@ def fact(n):
         raise ValueError("Cannot make factorial of a negative number.")
     if n == 0 or n == 1:
         return 1
-    return n * factorial(n - 1)
+    return n * fact(n - 1)
