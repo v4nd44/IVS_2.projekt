@@ -77,6 +77,8 @@ def sqrt(a,b):
 @raises ValueError if n is negative
 """
 def fact(n):
+    if not isinstance(n, int):
+        raise TypeError("Factorial is only defined for integers.")
     if n < 0:
         raise ValueError("Cannot make factorial of a negative number.")
     if n == 0 or n == 1:
