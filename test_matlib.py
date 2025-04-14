@@ -67,11 +67,14 @@ def test_div():
 
 # test funkcie umocnenie
 def test_power():
-    assert power(2, 0) == 1
     assert power(2, 1) == 2
     assert power(2, 2) == 4
+    assert power(2, 40) == 1099511627776
     assert power(0.5, 2) == 0.25
 
+    with pytest.raises(ValueError):
+        power(2, 0)
+    
     with pytest.raises(ValueError):
         power(2, -1)
 
@@ -86,16 +89,16 @@ def test_power():
 # test funkcie odmocnenie (prvy argumet = zaklad, druhy argument = stupen odmocniny)
 def test_sqrt():
     assert sqrt(4, 2) == 2
-    assert sqrt(0.5, 2) == 0.7071067812
+    assert sqrt(0.5, 2) == 0.7071067811865
     assert sqrt(27, 3) == 3
     assert sqrt(0, 2) == 0
     assert sqrt(1, 2) == 1
+    assert sqrt(2, 1) == 2
     assert sqrt(1000000000, 31622.776601683)
+
 
     with pytest.raises(ValueError):
         sqrt(2, 0)
-    with pytest.raises(ValueError):
-        sqrt(2, 1)
     with pytest.raises(ValueError):
         sqrt(2, -2)
     with pytest.raises(ValueError):
